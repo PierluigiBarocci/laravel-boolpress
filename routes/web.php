@@ -15,4 +15,6 @@ Route::get('/', 'HomeController@index')->name('public-home');
 
 Auth::routes();
 
-Route::get('/home', 'Admin\HomeController@index')->name('home');
+Route::get('/admin', 'Admin\HomeController@index')->name('home');
+
+Route::resource('/posts', 'Admin\PostController')->middleware('auth');

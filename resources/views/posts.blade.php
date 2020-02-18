@@ -10,7 +10,9 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         @forelse ($posts as $post)
-                            <li class="list-group-item">{{ $post->title }}</li>
+                            <li class="list-group-item">
+                                <a href="{{ route('blog.show', ['slug' => $post->slug]) }}">{{ $post->title }}</a>
+                            </li>
                         @empty
 
                         @endforelse

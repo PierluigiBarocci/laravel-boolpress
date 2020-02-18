@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('public-home');
+Route::get('/', 'HomeController@index')->name('public.home');
 
 Auth::routes();
 
-Route::get('/admin', 'Admin\HomeController@index')->name('home');
-
-Route::resource('/posts', 'Admin\PostController')->middleware('auth');
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function(){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::resource('/posts', 'PostController');
+});

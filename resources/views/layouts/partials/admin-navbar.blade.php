@@ -11,7 +11,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.posts.index') }}">Gestione Post</a>
+                    <a class="nav-link {{ route::currentRouteName() === 'admin.posts.index' ? 'active' : ' ' }}" href="{{ route('admin.posts.index') }}">Gestione Post</a>
                 </li>
             </ul>
 

@@ -17,6 +17,9 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 <li class="nav-item">
+                    <a class="nav-link {{ route::currentRouteName() === 'blog' ? 'active' : ' ' }}" href="{{ route('blog') }}">Blog</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Chi Siamo</a>
                 </li>
                 <li class="nav-item">

@@ -27,7 +27,7 @@
                                 <td>{{ $post->author }}</td>
                                 <td>{{ $post->slug }}</td>
                                 <td>
-                                    <a class="btn btn-primary" href="#">Dettagli</a>
+                                    <a class="btn btn-primary" href="{{ route('admin.posts.show', ['post'=> $post->id]) }}">Dettagli</a>
                                     <a class="btn btn-warning" href="#">Modifica</a>
                                     <a class="btn btn-danger" href="#">Elimina</a>
                                     {{-- <form class="d-inline" action="#" method="post">
